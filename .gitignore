@@ -1,0 +1,7 @@
+Errores.txt
+.idea/*
+.idea/vcs.xml
+apidoc/
+apidoc/*
+config.json
+data/
