@@ -13,17 +13,21 @@ func init() {
 	}
 }
 
-func GetActividades(pagina, limite int64, nombre string) (*[]ActividadRespuesta, error) {
+func GetActividades(pagina, limite int64, nombre string) (*[]ActividadRespuesta, bool, error) {
 	db := models.GetDB()
 
 	var actividades []Actividad
 
-	db.Where("nomact LIKE ?", "%"+nombre+"%").Limit(limite).Offset(pagina * limite).Find(&actividades)
+	db.Where("nomact LIKE ?", "%"+nombre+"%").Limit(limite + 1).Offset(pagina * limite).Find(&actividades)
 
 	actividadesResp := make([]ActividadRespuesta, 0, len(actividades))
 	for _, actividad := range actividades {
 		actividadesResp = append(actividadesResp, ActividadRespuesta{actividad.Idact, actividad.Nombre, "/actividades/" + strconv.FormatInt(actividad.Idact, 10)})
 	}
 
-	return &actividadesResp, nil
+	if len(actividades) > int(limite) {
+		actividadesResp = actividadesResp[:len(actividadesResp)-1]
+		return &actividadesResp, true, nil
+	}
+	return &actividadesResp, false, nil
 }

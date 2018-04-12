@@ -9,7 +9,10 @@ import (
 )
 
 func GetActividades(ctx *gin.Context) {
-	if ctx.GetHeader("Accept") != "application/json" && ctx.GetHeader("Accept") != "application/xml" {
+
+	header := ctx.GetHeader("Accept")
+
+	if header != "application/json" && header != "application/xml" {
 		ctx.Status(http.StatusNotAcceptable)
 		return
 	}
@@ -31,7 +34,7 @@ func GetActividades(ctx *gin.Context) {
 	}
 	name := ctx.DefaultQuery("nombre", "%%")
 
-	actividades, err := actividad.GetActividades(pagina, limite+1, name)
+	actividades, limit, err := actividad.GetActividades(pagina, limite, name)
 	if err != nil {
 		ctx.String(http.StatusInternalServerError, err.Error())
 		return
@@ -42,24 +45,33 @@ func GetActividades(ctx *gin.Context) {
 		return
 	}
 
-	respuesta := make(map[string]interface{}, 0)
-	respuesta["actividad"] = actividades
+	var respuesta actividad.ResponseActividad
+	respuesta.Actividad = actividades
 
-	if len(*actividades) > int(limite) {
+	links := make([]actividad.Links, 0, 1)
+
+	if limit {
 		if name == "%%" {
-			respuesta["links"] = map[string]string{"siguiente": "/actividades?pagina=" + strconv.FormatInt(pagina+2, 10) + "&limite=" + strconv.FormatInt(limite, 10)}
+			links = append(links, actividad.Links{"siguiente", "/actividades?pagina=" + strconv.FormatInt(pagina+2, 10) + "&limite=" + strconv.FormatInt(limite, 10)})
 		} else {
-			respuesta["links"] = map[string]string{"siguiente": "/actividades?pagina=" + strconv.FormatInt(pagina+2, 10) + "&limite=" + strconv.FormatInt(limite, 10) + "&nombre=" + name}
+			links = append(links, actividad.Links{"siguiente", "/actividades?pagina=" + strconv.FormatInt(pagina+2, 10) + "&limite=" + strconv.FormatInt(limite, 10) + "&nombre=" + name})
 		}
 	}
+
 	if pagina > 0 {
 		if name == "%%" {
-			respuesta["links"] = map[string]string{"siguiente": "/actividades?pagina=" + strconv.FormatInt(pagina, 10) + "&limite=" + strconv.FormatInt(limite, 10)}
+			links = append(links, actividad.Links{"anterior", "/actividades?pagina=" + strconv.FormatInt(pagina, 10) + "&limite=" + strconv.FormatInt(limite, 10)})
 		} else {
-			respuesta["links"] = map[string]string{"siguiente": "/actividades?pagina=" + strconv.FormatInt(pagina, 10) + "&limite=" + strconv.FormatInt(limite, 10) + "&nombre=" + name}
+			links = append(links, actividad.Links{"anterior", "/actividades?pagina=" + strconv.FormatInt(pagina, 10) + "&limite=" + strconv.FormatInt(limite, 10) + "&nombre=" + name})
 		}
 	}
 
-	ctx.JSON(http.StatusOK, respuesta)
+	respuesta.Links = links
+	if header == "application/json" {
+		ctx.JSON(http.StatusOK, respuesta)
+	} else {
+		ctx.XML(http.StatusOK, respuesta)
+	}
+
 	return
 }

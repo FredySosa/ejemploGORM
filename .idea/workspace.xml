@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8afc5535-4552-49ce-82e9-526c0b86b758" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/controllers/actividades-controller/Controller.go" afterPath="$PROJECT_DIR$/controllers/actividades-controller/Controller.go" />
+      <change beforePath="$PROJECT_DIR$/models/actividad/Actividad.go" afterPath="$PROJECT_DIR$/models/actividad/Actividad.go" />
       <change beforePath="$PROJECT_DIR$/models/actividad/Functions.go" afterPath="$PROJECT_DIR$/models/actividad/Functions.go" />
-      <change beforePath="$PROJECT_DIR$/modules/general/General.go" afterPath="$PROJECT_DIR$/modules/general/General.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="api.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="26" column="71" lean-forward="true" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+            <state relative-caret-position="60">
+              <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
               <folding>
                 <element signature="e#14#264#0" expanded="true" />
               </folding>
@@ -27,35 +27,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/actividades-controller/Controller.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="General.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/general/General.go">
+      <file leaf-file-name="Actividad.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/actividad/Actividad.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="164">
-              <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
-                <element signature="e#17#33#0" expanded="true" />
+                <element signature="e#19#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constantes.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/constantes/Constantes.go">
+      <file leaf-file-name="Functions.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/actividad/Functions.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="-442">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/actividades-controller/Controller.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
               <folding>
-                <element signature="e#20#106#0" expanded="true" />
+                <element signature="e#32#198#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,11 +88,11 @@
         <option value="$PROJECT_DIR$/models/municipios/Municipios.go" />
         <option value="$PROJECT_DIR$/api.go" />
         <option value="$PROJECT_DIR$/config.json" />
-        <option value="$PROJECT_DIR$/models/actividad/Actividad.go" />
         <option value="$PROJECT_DIR$/models/basedatos.go" />
         <option value="$PROJECT_DIR$/models/municipios/Functions.go" />
-        <option value="$PROJECT_DIR$/models/actividad/Functions.go" />
         <option value="$PROJECT_DIR$/modules/general/General.go" />
+        <option value="$PROJECT_DIR$/models/actividad/Functions.go" />
+        <option value="$PROJECT_DIR$/models/actividad/Actividad.go" />
         <option value="$PROJECT_DIR$/controllers/actividades-controller/Controller.go" />
       </list>
     </option>
@@ -305,16 +305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="26" column="71" lean-forward="true" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
-          <folding>
-            <element signature="e#14#264#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/municipios/Municipios.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -333,30 +323,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/actividad/Actividad.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="38" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/actividad/Functions.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="24" column="159" lean-forward="false" selection-start-line="24" selection-start-column="159" selection-end-line="24" selection-end-column="159" />
-          <folding>
-            <element signature="e#19#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/basedatos.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#16#160#0" expanded="true" />
+            <element signature="e#16#160#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -366,7 +338,7 @@
         <state relative-caret-position="1326">
           <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
           <folding>
-            <element signature="e#20#106#0" expanded="true" />
+            <element signature="e#20#106#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -376,16 +348,46 @@
         <state relative-caret-position="164">
           <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           <folding>
-            <element signature="e#17#33#0" expanded="true" />
+            <element signature="e#17#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/actividad/Functions.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/actividad/Actividad.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#19#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
+          <folding>
+            <element signature="e#14#264#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/actividades-controller/Controller.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="54" lean-forward="false" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="268">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="e#32#198#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
